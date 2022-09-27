@@ -1,28 +1,28 @@
-
 .image {
-    background-image: url("achievement.png");
-    background-size: cover;
+  background-image: url("achievement.png");
+  background-size: cover;
 }
 
 .heading-style {
-    font-family: Arial, Georgia, 'Times New Roman', Times, serif, sans-serif;
-    text-align: center;
-    font-size: 1.5em;
+  font-family: Arial, Georgia, "Times New Roman", Times, serif, sans-serif;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .quote-style {
-    font-family: serif, sans-serif;
-    font-weight: 1000;
-    font-style: italic;
-    font-size: 3em;
+  font-family: serif, sans-serif;
+  font-weight: 1000;
+  font-style: italic;
+  font-size: 3em;
 }
 
 .author-style {
-    font-style: italic;
-    font-size: 1.5em;
+  font-style: italic;
+  font-size: 1.5em;
 }
 
 .refresh-button {
-    position: absolute;
-    bottom: 15px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
