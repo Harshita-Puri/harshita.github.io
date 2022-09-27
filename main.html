@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Importing css -->
+    <link href="all.css" rel="stylesheet">
+    <!-- Importing bootstrap file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>Motivation for the Day</title>
+</head>
+
+<body class="image">
+    <div class="container">
+        <!-- Quote and author container -->
+        <div>
+            <!-- <h1 class="heading-style">Motivation for the day</h1> -->
+            <p id="quote" class="quote-style m-2"></p>
+            <span id="author" class="author-style m-3"></span>
+        </div>
+        <!-- Button container -->
+        <div class="text-center">
+            <button id="new-quote" class="btn btn-danger refresh-button" onclick="refreshPage()">
+                <span>Want more motivation?</span>
+            </button> 
+        </div>
+    </div>
+
+</html>
+
+<!-- Script to fetch a random quote -->
+<script>
+    // Path: main.js
+    const quote = document.getElementById('quote');
+    const author = document.getElementById('author');
+    const url = 'https://api.quotable.io/random';
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            quote.innerHTML = data.content;
+            author.innerHTML = data.author;
+        });
+</script>
+
+<!-- Script for a window refresh button -->
+<script>
+    // Path: main.js
+    function refreshPage() {
+        window.location.reload();
+    }
+</script>
